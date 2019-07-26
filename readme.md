@@ -80,25 +80,33 @@ Shader Graph นั้นเราต้องลงผ่าน **Package Manag
  * Blend Blend Mode ของ Shader
  * Two Sided ทำให้ Shaderของเรา Render Backface 
 
-**Output**  *สำหรับ Metalic*
+**Output**
 
- * Albedo
- * Emission
- * Normal
- * Alpha
+*เลือกมาเฉพาะที่ใช้บ่อย*
 
+ * Albedo สีของวัตุถุ
+ * Emission สีที่เรืองแสงออกมาจากวัตถุ
+ * Normal ค่า Normal ของวัตถุ
+ * Alpha ค่า Alpha ของ Obejct 
+ * AlphaClipThreshold ค่า AlphaClip ของ Object 
 
+###Node
 
+เป็น Node ปกติที่เราจะใช้ สามารถสร้างโดยการ คลิ้งขวาในพื้นที่ว่างเลือก Create Node แบ่งออกเป็นหลายประเภทและ ถ้าเราทำบ่อยแล้วเราสามาถค้นหา Nodeที่ต้องการได้เลยในช่อง Seach
 
+**Input > Basic**
+  *เลือกมาเฉพาะที่ใช้บ่อย*
+ 
+ * **Vector 1 ,2 ,3 ,4** ค่า Vector แต่ละแบบที่ Unityแยกออกมาให้ ซึ่งแท้จริงแล้วใน HLSL มีแค่ Vector4 หมายความว่าต่อให้เราเลือก Vector1 สุดท้ายแล้วจะถูกแปลงให้เป็น (x,0,0,0) อยู่ดีจึงเป็นสิ่งที่ต้องระวังเล็กน้อยเวลาใช้ Vector
 
+ * **Color** สี เป็นค่า Vector 4 ที่ถูกแปลงให้เป็น (R,G,B,A) 
 
+ * **Time** ค่าเวลา Time มีให้เลือกหลายแบบแล้วแต่การใช้งานของเรา 
 
+**Input > Texture**
 
+ * **Texture 2D Asset** ค่า Texture2d ก็คือรูปปกติทั่วไป
 
-
-
-
-
-
-
-	 
+ * **Sample Texture 2D** ค่า Texture2D ที่มีการเอามารวมกับ UV และ SamplerMode แล้วกลายเป็น RGBA และเราสามารถกำหนดโหมดของ Textureได้
+* Default คือ เอาค่าเริ่มต้นจาก Texture ที่รับมา
+* Normal คือ ใช้ Textureนี้เป็นค่า Normal
