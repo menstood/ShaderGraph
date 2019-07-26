@@ -69,16 +69,17 @@ Shader Graph นั้นเราต้องลงผ่าน **Package Manag
  
 **Setting** รูปเฟืองข้างหลัง Master Node 
 
- * WorkFlow คือ การตั้งค่าของการสะท้อนแสงบนพื้นผิวของ Shader
-* Metalic พื้นผิวแบบโลหะ จะสะท้อนแสงตามปกติ แสงเข้ามาสีอะไรก็จะสะท้อนบนวัตถุเป็นสีนั้น
-* Specular จะมีความมันวาวเป็นพิเศษ ใช้ควบคู่กับ Specular Map เพื่อควบคุมความมันวาวและสีที่สะท้อนออกไป
+* WorkFlow คือ การตั้งค่าของการสะท้อนแสงบนพื้นผิวของ Shader
+    * Metalic พื้นผิวแบบโลหะ จะสะท้อนแสงตามปกติ แสงเข้ามาสีอะไรก็จะสะท้อนบนวัตถุเป็นสีนั้น
+    * Specular จะมีความมันวาวเป็นพิเศษ ใช้ควบคู่กับ Specular Map เพื่อควบคุมความมันวาวและสีที่สะท้อนออกไป
 
- * Surface ลักษณะพื้นผิว
-* Opaque ทึบแสง
-* Transparent โปร่งแสง
+*  Surface ลักษณะพื้นผิว
 
- * Blend Blend Mode ของ Shader
- * Two Sided ทำให้ Shaderของเรา Render Backface 
+    * Opaque ทึบแสง
+    * Transparent โปร่งแสง
+
+* Blend Blend Mode ของ Shader
+* Two Sided ทำให้ Shaderของเรา Render Backface 
 
 **Output**
 
@@ -92,7 +93,7 @@ Shader Graph นั้นเราต้องลงผ่าน **Package Manag
 
 ###Node
 
-เป็น Node ปกติที่เราจะใช้ สามารถสร้างโดยการ คลิ้งขวาในพื้นที่ว่างเลือก Create Node แบ่งออกเป็นหลายประเภทและ ถ้าเราทำบ่อยแล้วเราสามาถค้นหา Nodeที่ต้องการได้เลยในช่อง Seach
+เป็น Node ปกติที่เราจะใช้ สามารถสร้างโดยการ คลิ้งขวาในพื้นที่ว่างเลือก Create Node แบ่งออกเป็นหลายประเภทและ ถ้าเราทำบ่อยแล้วเราสามาถค้นหา Nodeที่ต้องการได้เลยในช่อง Seach 
 
 **Input > Basic**
   *เลือกมาเฉพาะที่ใช้บ่อย*
@@ -108,5 +109,17 @@ Shader Graph นั้นเราต้องลงผ่าน **Package Manag
  * **Texture 2D Asset** ค่า Texture2d ก็คือรูปปกติทั่วไป
 
  * **Sample Texture 2D** ค่า Texture2D ที่มีการเอามารวมกับ UV และ SamplerMode แล้วกลายเป็น RGBA และเราสามารถกำหนดโหมดของ Textureได้
-* Default คือ เอาค่าเริ่มต้นจาก Texture ที่รับมา
-* Normal คือ ใช้ Textureนี้เป็นค่า Normal
+  * Default คือ เอาค่าเริ่มต้นจาก Texture ที่รับมา
+  * Normal คือ ใช้ Textureนี้เป็นค่า Normal
+
+
+
+
+
+
+
+
+
+
+
+	 
