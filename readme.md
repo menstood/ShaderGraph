@@ -62,8 +62,8 @@ Shader Graph นั้นเราต้องลงผ่าน **Package Manag
 
 ![home](readmeAssets/graphScreen.png)
 
- เปิดมาเราจะเจอ Node แรกชื่อ **PBR Master** เราจะเรียก Node นี้ว่า Master Node 
-  
+
+ เปิดมาเราจะเจอ Node แรกชื่อ **PBR Master** เราจะเรียก Node นี้ว่า **Master Node** และที่ว่างๆเราขอเรียกมันว่า **Canvas**  
 
 ###Master Node
 
@@ -72,7 +72,7 @@ Shader Graph นั้นเราต้องลงผ่าน **Package Manag
 **Setting** รูปเฟืองข้างหลัง Master Node 
 
 * WorkFlow คือ การตั้งค่าของการสะท้อนแสงบนพื้นผิวของ Shader
-    * Metalic พื้นผิวแบบโลหะ จะสะท้อนแสงตามปกติ แสงเข้ามาสีอะไรก็จะสะท้อนบนวัตถุเป็นสีนั้น
+    * Metallic พื้นผิวแบบโลหะ จะสะท้อนแสงตามปกติ แสงเข้ามาสีอะไรก็จะสะท้อนบนวัตถุเป็นสีนั้น
     * Specular จะมีความมันวาวเป็นพิเศษ ใช้ควบคู่กับ Specular Map เพื่อควบคุมความมันวาวและสีที่สะท้อนออกไป
 
 *  Surface ลักษณะพื้นผิว
@@ -85,6 +85,9 @@ Shader Graph นั้นเราต้องลงผ่าน **Package Manag
 
 **Output**
 
+
+ เป็นที่ๆเอาไว้สำหรับลาก Nodeต่างๆ ที่เราทำมาใส่ ตามช่องต่อไปนี้
+
 *เลือกมาเฉพาะที่ใช้บ่อย*
 
  * Albedo สีของวัตุถุ
@@ -93,9 +96,30 @@ Shader Graph นั้นเราต้องลงผ่าน **Package Manag
  * Alpha ค่า Alpha ของ Obejct 
  * AlphaClipThreshold ค่า AlphaClip ของ Object 
 
+หลังจากเราลากเส้นจาก Nodeมาใส่ตามที่เราต้องการแล้วให้กด Save เพื่อเชคว่ากับในหน้าต่าง Scene หรือ Game ว่าผลออกมาตามที่เราต้องการหรือไม่
+
+### Properties
+
+เป็นที่สำหรับส่งค่าต่างๆ ออกไปให้ใน Editor เอาไว้ Setค่าหรือเขียนโค้ดต่างๆ เราสามารถกดปุ่มเครื่องหมาย + ด้านขวาเพื่อเพิ่ม Properties ที่เราต้องการ
+Properties แต่ละแบบจะมีส่วนสำคัญๆ คือ
+ 
+* **Name** ชื่อของ Property ที่ใช้ใน Shader Graph
+* **Reference** ชื่ออ้างอิงสำหรับการใช้ Set value ผ่านการcoding *ถ้าเราไม่ใส่ _ ไว้ข้างหน้าReference ตัว ShaderGraphจะทำการใส่ให้โดยอัตโนมัติ
+* **Default** ค่าเริ่มต้นของ Property
+
+Proterties ที่ใช้ส่วนใหญ่ได้แก่ 
+
+* **Vector1** แทนค่า Float สามารถทำเป็น Slider Min Max โดยการปรับ **Mode** เป็น Slider
+* **Vector2 , 3 ,4 ** แทนค่า Vector ถึงแม้ว่าเราจะเลือก Vector2 หรือ Vector3 ใน Unity Editor จะแสดงผลเป็น Vector4 เสมอ เช่น ถ้าเราเลือก Vector2 จะมีค่า x y z w มาให้ แต่ โปรแกรมจะนำไปใช้เฉพาะ x y เท่านั้น
+* **Color** ค่าสี สามารถปรับเป็น HDR ได้โดยการเปลี่ยน Mode
+* **Texture** รูปภาพต่างๆที่เอามาใช้แสดงผล ไม่ว่าจะเป็น Texture ปกติหรือ Normal Map หรือ Emission Map อะไรก็แล้วแต่ที่เป็นรูปภาพจะใช้ Propertiesนี้ *ถ้าใช้เป็น Normal Map ต้องเปลี่ยน Mode เป็น Bump ด้วย
+
+เราสามารถลาก Propertiesของเราลงไปไว้ใน Canvas ได้เลยถ้าต้องการใช้
+
 ###Node
 
-เป็น Node ปกติที่เราจะใช้ สามารถสร้างโดยการ คลิ้งขวาในพื้นที่ว่างเลือก Create Node แบ่งออกเป็นหลายประเภทและ ถ้าเราทำบ่อยแล้วเราสามาถค้นหา Nodeที่ต้องการได้เลยในช่อง Seach 
+เป็น Node ปกติที่เราจะใช้ สามารถสร้างโดยการ คลิ้งขวาในพื้นที่ว่างเลือก Create Node แบ่งออกเป็นหลายประเภทและ ถ้าเราทำบ่อยแล้วเราสามาถค้นหา Nodeที่ต้องการได้เลยในช่อง Search โดยแต่ละ Node นั้น ฝั่งทางซ้ายจะเป็น Input ทางขวาจะเป็น Output เราไม่สามารถลากจากฝั่งขวาใส่ฝั่งขวาได้
+
 
 **Input > Basic**
   *เลือกมาเฉพาะที่ใช้บ่อย*
@@ -111,10 +135,33 @@ Shader Graph นั้นเราต้องลงผ่าน **Package Manag
  * **Texture 2D Asset** ค่า Texture2d ก็คือรูปปกติทั่วไป
 
  * **Sample Texture 2D** ค่า Texture2D ที่มีการเอามารวมกับ UV และ SamplerMode แล้วกลายเป็น RGBA และเราสามารถกำหนดโหมดของ Textureได้
-  * Default คือ เอาค่าเริ่มต้นจาก Texture ที่รับมา
-  * Normal คือ ใช้ Textureนี้เป็นค่า Normal
+  
+* Default คือ เอาค่าเริ่มต้นจาก Texture ที่รับมา
+* Normal คือ ใช้ Textureนี้เป็นค่า Normal
+ 
+**Math > Basic**
+
+ * **Add** การบวกค่าระหว่าง A และ B (A + B)
+ * **Multiplier** การคูณค่าระหว่าง A และ B (A x B) 
+ * **Subtract** การลบค่าระหว่าง A และ B  (A - B)
+ * **Divide** การหารค่าระหว่าง A และ B (A ÷ B)
+ 
+**Math > Range**
+
+ * **One Minus** การเอา -1 เข้าไปคูณกับ Input Value
+ * **Remap** การขยับ Value Range ของเรา ไปเป็น Rangeใหม่ตามที่เราต้องการ คล้ายๆ การเทียบบัญญัติไตรยางศ์ แบบเป็น Min Max
+
+**Math > Trigonometry**
+
+ * **Sine** การเอา Input Value มาเข้าสมมการ Sine แล้วออกมาเป็น Output
 
 
+***
+
+#Note#
+
+
+ หากมีคำถามหรือข้อสงสัยรบกวนติดต่อผ่าน E-mail **Gittitat@praneat.com** ขอบคุณครับ
 
 
 
