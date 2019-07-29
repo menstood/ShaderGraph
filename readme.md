@@ -135,8 +135,9 @@ Proterties ที่ใช้ส่วนใหญ่ได้แก่
  * **Texture 2D Asset** ค่า Texture2d ก็คือรูปปกติทั่วไป
 
  * **Sample Texture 2D** ค่า Texture2D ที่มีการเอามารวมกับ UV และ SamplerMode แล้วกลายเป็น RGBA และเราสามารถกำหนดโหมดของ Textureได้
-  * Default คือ เอาค่าเริ่มต้นจาก Texture ที่รับมา
-  * Normal คือ ใช้ Textureนี้เป็นค่า Normal
+ 
+     * Default คือ เอาค่าเริ่มต้นจาก Texture ที่รับมา
+     * Normal คือ ใช้ Textureนี้เป็นค่า Normal
  
 **Math > Basic**
 
