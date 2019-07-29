@@ -60,6 +60,8 @@ Shader Graph นั้นเราต้องลงผ่าน **Package Manag
 ***
 #Shader Graph Editor
 
+![home](readmeAssets/graphScreen.png)
+
  เปิดมาเราจะเจอ Node แรกชื่อ **PBR Master** เราจะเรียก Node นี้ว่า Master Node 
   
 
