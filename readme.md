@@ -3,7 +3,10 @@
 ###แล้วมันคืออะไร 
   *" ผิดพลาดตรงไหนขออภัยด้วยเขียนตามความเข้าใจของตัวเอง แต่คิดว่าไม่น่าพลาด "*
 
-Shader Editor ของตัว Unity เองเป็น Node Visual ซึ่งที่ผ่านมา Unity ไม่เคยมี Shader Editor ของตัวเอง
+ ก่อนอื่นเลยเราต้องมารู้จักกับสิ่งที่เรียกว่า **Shader** กันก่อน Shaderคือโค้ดที่เอาไว้สำหรับแสดงผลต่างๆของ Material ของเราใน Unity ซึ่ง Material ทุกอันจำเป็นต้องมี Shader ถ้าไม่มี Model หรือ UI ของเราจะกลายเป็น สีชมพู ซึ่งใน Unity นั้นจะมี Shader เริ่มต้นมาให้แล้ว แต่ว่าอาจจะไม่ตรงความต้องการของเราเราจีงต้องจำเป็นต้องเรียนรู้เกี่ยวกับ Shader Editor นั่นเอง
+
+
+**Shader Editor** ของตัว Unity เองเป็น Node Visual ซึ่งที่ผ่านมา Unity ไม่เคยมี Shader Editor ของตัวเอง
 ทำให้การเขียน Shader เองนั้นทำได้ยากสำหรับผู้ที่ต้องการเริ่มต้นใหม่ Shader Graph จำเป็นต้องใช้คู่ไปกับ BuildPipeline ตัวใหม่ของ Unity 
 
 # Pro/Cons
@@ -71,17 +74,17 @@ Shader Graph นั้นเราต้องลงผ่าน **Package Manag
  
 **Setting** รูปเฟืองข้างหลัง Master Node 
 
-* WorkFlow คือ การตั้งค่าของการสะท้อนแสงบนพื้นผิวของ Shader
+* **WorkFlow** คือ การตั้งค่าของการสะท้อนแสงบนพื้นผิวของ Shader
     * Metallic พื้นผิวแบบโลหะ จะสะท้อนแสงตามปกติ แสงเข้ามาสีอะไรก็จะสะท้อนบนวัตถุเป็นสีนั้น
-    * Specular จะมีความมันวาวเป็นพิเศษ ใช้ควบคู่กับ Specular Map เพื่อควบคุมความมันวาวและสีที่สะท้อนออกไป
+    * Specular จะมีความมันวาวเป็นพิเศษ ใช้ควบคู่กับ Specular Map เพื่อควบคุมความมันวาวและสีที่สะท้อนออกไป ทำให้เราสามารถกำหนดสีของแสงที่ออกมาหลังจากกระทบกับวัตถุได้นั่นเอง
 
-*  Surface ลักษณะพื้นผิว
+*  **Surface** ลักษณะพื้นผิว
 
     * Opaque ทึบแสง
     * Transparent โปร่งแสง
 
-* Blend Blend Mode ของ Shader
-* Two Sided ทำให้ Shaderของเรา Render Backface 
+* **Blend** Blend Mode ของ Shader
+* **Two Sided** ทำให้ Shaderของเรา Render Backface 
 
 **Output**
 
@@ -90,11 +93,11 @@ Shader Graph นั้นเราต้องลงผ่าน **Package Manag
 
 *เลือกมาเฉพาะที่ใช้บ่อย*
 
- * Albedo สีของวัตุถุ
- * Emission สีที่เรืองแสงออกมาจากวัตถุ
- * Normal ค่า Normal ของวัตถุ
- * Alpha ค่า Alpha ของ Obejct 
- * AlphaClipThreshold ค่า AlphaClip ของ Object 
+ * **Albedo** สีของวัตุถุ
+ * **Emission** สีที่เรืองแสงออกมาจากวัตถุ
+ * **Normal** ค่า Normal ของวัตถุ
+ * **Alpha** ค่า Alpha ของ Obejct 
+ * **AlphaClipThreshold** ค่า AlphaClip ของ Object 
 
 หลังจากเราลากเส้นจาก Nodeมาใส่ตามที่เราต้องการแล้วให้กด Save เพื่อเชคว่ากับในหน้าต่าง Scene หรือ Game ว่าผลออกมาตามที่เราต้องการหรือไม่
 
@@ -148,12 +151,12 @@ Proterties ที่ใช้ส่วนใหญ่ได้แก่
  
 **Math > Range**
 
- * **One Minus** การเอา -1 เข้าไปคูณกับ Input Value
+ * **One Minus** การ Invert ค่า Input หรือ การเอา -1 เข้าไปคูณกับ Input Value นั่นเอง
  * **Remap** การขยับ Value Range ของเรา ไปเป็น Rangeใหม่ตามที่เราต้องการ คล้ายๆ การเทียบบัญญัติไตรยางศ์ แบบเป็น Min Max
-
+ * **Clamp** การคุม Input Value ของเราไม่ให้ ต่ำเกินค่า Min หรือมากเกินค่า Max 
 **Math > Trigonometry**
 
- * **Sine** การเอา Input Value มาเข้าสมมการ Sine แล้วออกมาเป็น Output
+ * **Sine** การเอา Input Value มาเข้าสมมการ Sine แล้วออกมาเป็น Output (*ก่อนจะใช้ node นี้ node ที่ผ่านมาจำเป็นต้องมี node Time มาก่อน* )
 
 
 ***
