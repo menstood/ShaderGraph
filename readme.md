@@ -1,6 +1,6 @@
-#Unity Shader Graph
+# Unity Shader Graph
 
-###แล้วมันคืออะไร 
+### แล้วมันคืออะไร 
   *" ผิดพลาดตรงไหนขออภัยด้วยเขียนตามความเข้าใจของตัวเอง แต่คิดว่าไม่น่าพลาด "*
 
  ก่อนอื่นเลยเราต้องมารู้จักกับสิ่งที่เรียกว่า **Shader** กันก่อน Shaderคือโค้ดที่เอาไว้สำหรับแสดงผลต่างๆของ Material ของเราใน Unity ซึ่ง Material ทุกอันจำเป็นต้องมี Shader ถ้าไม่มี Model หรือ UI ของเราจะกลายเป็น สีชมพู ซึ่งใน Unity นั้นจะมี Shader เริ่มต้นมาให้แล้ว แต่ว่าอาจจะไม่ตรงความต้องการของเราเราจีงต้องจำเป็นต้องเรียนรู้เกี่ยวกับ Shader Editor นั่นเอง
@@ -10,14 +10,14 @@
 ทำให้การเขียน Shader เองนั้นทำได้ยากสำหรับผู้ที่ต้องการเริ่มต้นใหม่ Shader Graph จำเป็นต้องใช้คู่ไปกับ BuildPipeline ตัวใหม่ของ Unity 
 
 # Pro/Cons
-###ข้อดี
+### ข้อดี
  * **BuildPipeline** อันใหม่ตรงตามการใข้งานของผู้ใช้ ด้วย Performance สูงสุด
 
  * **Base on HLSL** คือ Shader Graph เป็น HLSL(High Level Shader Language)ตั้งแต่แรก ซึ่งShader Languageเก่าของ Unityนั้นเป็น CG ซึ่งเวลานำไป 
      ใช้งานนั้น Program จะแปลงจาก CG ไปเป็น HLSL หรือ GLSL ตาม Platform ที่ใช้งานอยู่ดี และสุดท้ายคือ Nvidia เลิกซัพพอท CG แล้ว
 
  * **Native** เพราะเป็น Native ของUnityเอง ทำให้Community และการแก้บัคต่างๆ ได้รับการแก้ไขและพัฒนาเพิ่มตลอดเวลา
-###ข้อเสีย
+### ข้อเสีย
  * **Feature** ยังน้อยอยู่ยังทำบางอย่างไม่ได้ ในตอนนี้ต้องรออัพเดทในอนาคต
  * **Bug** ยังมีบัคแปลกๆบางอย่างที่ทำให้ตัว Editor มีปัญหาหรือ Node แสดงผลไม่ถูกต้องรอการแก้ไขต่อไป
 
@@ -61,14 +61,14 @@ Shader Graph นั้นเราต้องลงผ่าน **Package Manag
  * ถ้าเราลง Pipeline ถูกต้อง Unityจะเปิดหน้า Editor ของ Shader ให้
 
 ***
-#Shader Graph Editor
+# Shader Graph Editor
 
 ![home](readmeAssets/graphScreen.png)
 
 
  เปิดมาเราจะเจอ Node แรกชื่อ **PBR Master** เราจะเรียก Node นี้ว่า **Master Node** และที่ว่างๆเราขอเรียกมันว่า **Canvas**  
 
-###Master Node
+### Master Node
 
 เป็น Node ที่ประกอบไปด้วย Setting และ Output ของ Shader
  
@@ -161,7 +161,7 @@ Proterties ที่ใช้ส่วนใหญ่ได้แก่
 
 ***
 
-#Note#
+# Note #
 
 
  หากมีคำถามหรือข้อสงสัยรบกวนติดต่อผ่าน E-mail **Gittitat@praneat.com** ขอบคุณครับ
