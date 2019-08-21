@@ -54,7 +54,7 @@ Shader Graph นั้นเราต้องลงผ่าน **Package Manag
 
 ***
 
-#How to Create
+# How to Create
 
  * Menu > Assets > Create > Shader > PBR Graph เราก็จะได้ไฟล์ Shader ของเรามา
  * ตั้งชื่อให้เรียบร้อย แล้วดับเบิลคลิ้ก หรือ **Open Shader Editor** ใน Inspector ของไฟล์Shader
@@ -119,7 +119,7 @@ Proterties ที่ใช้ส่วนใหญ่ได้แก่
 
 เราสามารถลาก Propertiesของเราลงไปไว้ใน Canvas ได้เลยถ้าต้องการใช้
 
-###Node
+### Node
 
 เป็น Node ปกติที่เราจะใช้ สามารถสร้างโดยการ คลิ้งขวาในพื้นที่ว่างเลือก Create Node แบ่งออกเป็นหลายประเภทและ ถ้าเราทำบ่อยแล้วเราสามาถค้นหา Nodeที่ต้องการได้เลยในช่อง Search โดยแต่ละ Node นั้น ฝั่งทางซ้ายจะเป็น Input ทางขวาจะเป็น Output เราไม่สามารถลากจากฝั่งขวาใส่ฝั่งขวาได้
 
