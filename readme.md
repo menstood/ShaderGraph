@@ -154,6 +154,7 @@ Proterties ที่ใช้ส่วนใหญ่ได้แก่
  * **One Minus** การ Invert ค่า Input หรือ การเอา -1 เข้าไปคูณกับ Input Value นั่นเอง
  * **Remap** การขยับ Value Range ของเรา ไปเป็น Rangeใหม่ตามที่เราต้องการ คล้ายๆ การเทียบบัญญัติไตรยางศ์ แบบเป็น Min Max
  * **Clamp** การคุม Input Value ของเราไม่ให้ ต่ำเกินค่า Min หรือมากเกินค่า Max 
+ 
 **Math > Trigonometry**
 
  * **Sine** การเอา Input Value มาเข้าสมมการ Sine แล้วออกมาเป็น Output (*ก่อนจะใช้ node นี้ node ที่ผ่านมาจำเป็นต้องมี node Time มาก่อน* )
